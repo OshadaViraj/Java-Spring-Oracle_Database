@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+ <definition name="base" template="/layout/home.jsp">
+        
+        <put-attribute name="header" value="/layout/header.jsp"/>
+        <put-attribute name="content" value="/layout/content.jsp"/>
+        <put-attribute name="footer" value="/layout/footer.jsp"/>
+        <put-attribute name="left" value="/layout/left_Menu.jsp"/>
+        
+    </definition>
+    <definition name="login" extends="base">
+        <put-attribute name="header" value=" "/>
+        
+        <put-attribute name="footer" value=" "/>
+        <put-attribute name="left" value=" "/>
+        
+        <put-attribute name="content" value="/login.jsp" /> 
+    </definition>
+  
+    <definition name="header" extends="base">
+        <put-attribute name="header" value="/layout/header.jsp"/>
+    </definition>   
+    
+    <definition name="left" extends="base">
+        <put-attribute name="menu" value="/layout/left_Menu.jsp"/>
+    </definition>
+    
+    <definition name="content" extends="base">
+        <put-attribute name="body" value="/layout/content.jsp"/>
+    </definition>
+      <definition name="footer" extends="base">
+        <put-attribute name="body" value="/layout/footer.jsp"/>
+    </definition>
+    
+      <definition name="newHotel" extends="base">
+        <put-attribute name="content" value="/pages/hotel/addHotel.jsp" /> 
+    </definition>
+    
+      <definition name="viewAllHotels" extends="base">
+        <put-attribute name="content" value="/pages/hotel/viewAllHotels.jsp" /> 
+    </definition>
+      <definition name="info" extends="base">
+        <put-attribute name="content" value="/pages/hotel/hotelInfo.jsp" /> 
+    </definition>
+    
+    
+    <definition name="releaseReport" extends="base">
+        <put-attribute name="content" value="/page/releaseReport.jsp" /> 
+    </definition> 
+    
+    
+    
+    
+   
+    
+</tiles-definitions>
